@@ -1,3 +1,7 @@
 .container {
   margin-top: 30px;
 }
+
+input.ng-invalid.ng-touched { /* can create red border for inputs thata have been clicked on but do not have valid input */
+  border: 1px solid red; /* these class names and more are provided by angular to assess the state of forms under a variety of scenarios */
+}
