@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm"> <!-- when the form is submitted, call our onSubmit function -->
+      <form (ngSubmit)="onSubmit()" #f="ngForm"> <!-- when the form is submitted, call our onSubmit function -->
                                             <!-- gives us access to the javascript object version of the form in the function -->
         <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup"> <!-- groups these inputs together in ngForm object -->
           <div class="form-group">
@@ -40,6 +40,17 @@
 
         <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button> <!-- button is disabled if the form (referenced by f) is not valid -->
       </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>Your Data</h3>
+      <p>Username: {{user.username}}</p>
+      <p>Mail: {{user.email}}</p>
+      <p>Secret Question: Your first {{user.secretQuestion}}</p>
+      <p>Answer: {{user.answer}}</p>
+      <p>Gender: {{user.gender}}</p>
     </div>
   </div>
 </div>
