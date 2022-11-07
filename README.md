@@ -1,4 +1,8 @@
-# FirstApp
+# angularSandbox_forms-template-driven
+
+Practicing template driven forms in Angular.
+
+Referencing the Udemy course Angular - The Complete Guide (2022 Edition) by Maximilian Schwarzmüller.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
 
