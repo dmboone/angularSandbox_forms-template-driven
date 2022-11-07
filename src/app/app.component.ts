@@ -52,5 +52,9 @@ export class AppComponent {
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.gender;
     this.submitted = true;
+
+    this.signupForm.reset(); // empties input and also resets the state of all the inputs
+    // if you want you could also pass an object like in setValue() to reset() in order to reset the
+    // form to specific values
   }
 }
