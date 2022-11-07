@@ -23,6 +23,13 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+
+        <!-- two way data binding -->
+        <div class="form-group">
+          <textarea class="form-control" name="questionAnswer" rows="3" [(ngModel)]="answer"></textarea> 
+        </div>
+        <p>Your reply: {{ answer }}</p>
+        
         <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button> <!-- button is disabled if the form (referenced by f) is not valid -->
       </form>
     </div>
