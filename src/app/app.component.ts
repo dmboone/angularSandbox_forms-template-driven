@@ -10,6 +10,7 @@ export class AppComponent {
   // @ViewChild('f') signupForm: NgForm; // could also use viewchild to gain access to form
   defaultQuestion = 'pet';
   answer = '';
+  genders = ['male', 'female'];
 
   suggestUserName() {
     const suggestedName = 'Superuser';
